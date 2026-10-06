@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TechMinds — Software Design, Development &amp; Cloud Services</title>
   <meta name="description" content="TechMinds is an IT consulting firm specializing in software design, custom development, and cloud services for growing businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js" } }
+  </script>
 </head>
 <body>
 
@@ -41,17 +47,9 @@
           <div><strong>Fixed-scope</strong><span>No surprise invoices</span></div>
         </div>
       </div>
-      <div class="hero-panel">
-        <div class="panel-head"><span></span><span></span><span></span></div>
-        <code><b>service</b>: <span class="s">"software-design"</span></code>
-        <code><b>service</b>: <span class="s">"development"</span></code>
-        <code><b>service</b>: <span class="s">"cloud-services"</span></code>
-        <code>&nbsp;</code>
-        <code><b>deploy</b>(<span class="s">your_product</span>) {</code>
-        <code>&nbsp;&nbsp;architecture.review();</code>
-        <code>&nbsp;&nbsp;infrastructure.provision();</code>
-        <code>&nbsp;&nbsp;team.ship();</code>
-        <code>}</code>
+      <div class="hero-visual" id="hero-visual">
+        <div class="hero-visual-fallback" aria-hidden="true"></div>
+        <canvas id="hero-3d-canvas" aria-hidden="true"></canvas>
       </div>
     </div>
   </section>
@@ -222,5 +220,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script type="module" src="js/hero-3d.js"></script>
 </body>
 </html>
